@@ -84,21 +84,20 @@ body {
 
 .card {
   width: inherit;
-  height: 40px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: white;
   box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.178);
   border-radius: 8px;
   font-size: 16px;
   font-weight: 300;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-.invisible {
-  display: none;
+.card > span:nth-child(2) {
+  margin-left: auto;
 }
 
 span > button {
@@ -120,7 +119,11 @@ span > button:nth-child(2) {
 }
 
 @media only screen and (min-width: 600px) {
-  span > button:nth-child(2) {
+  span > button:nth-child(1) {
     display: none;
+  }
+
+  .card {
+    flex-direction: row;
   }
 }

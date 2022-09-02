@@ -120,7 +120,7 @@ function renderToHtml() {
       <span> ${i + 1}. &nbsp;<b>${e.fullname}</b> </span>
       <span> ${
         e.date
-      } <button onclick="handleEdit(${i})">Edit</button> <button onclick="handleDelete(${i})">Delete</button> </span>
+      } <br /><button onclick="handleEdit(${i})">Edit</button> <button onclick="handleDelete(${i})">Delete</button> </span>
     </div>`;
   });
 }
