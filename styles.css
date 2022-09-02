@@ -97,10 +97,13 @@ body {
 }
 
 .card > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: auto;
 }
 
-span > button {
+.card > span:nth-child(2) button:nth-child(1) {
   border: none;
   outline: none;
   background-color: orange;
@@ -109,7 +112,7 @@ span > button {
   cursor: pointer;
 }
 
-span > button:nth-child(2) {
+.card > span:nth-child(2) button:nth-child(2) {
   border: none;
   outline: none;
   background-color: red;
@@ -119,11 +122,17 @@ span > button:nth-child(2) {
 }
 
 @media only screen and (min-width: 600px) {
-  span > button:nth-child(1) {
+  .card > span:nth-child(2) button:nth-child(2) {
     display: none;
   }
 
   .card {
     flex-direction: row;
+  }
+
+  .card > span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
